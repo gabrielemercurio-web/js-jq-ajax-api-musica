@@ -36,23 +36,27 @@ $(document).ready(function() {
                 $('.cds-container').append(cd);
             }
 
+            $('#genere').change(function () {
+                console.log('click!!!');
+
+                var option = $(this).find(':selected').val();;
+
+                if ($(option) != $('.cd .genre').text()) {
+                    $('.cd').addClass('invisible');
+                };
+
+                // $('#genere option').each(function() {
+                //     option += $(this).find(":selected").val();
+                // });
+            });
+
+
         },
 
         'error': function () {
             console.log('Errore!');
         }
     });
-
-    $('#genere').change(function () {
-
-        var option = '';
-
-        $('#genere option').each(function() {
-            option += $(this).text() + ' ';
-        });
-        console.log(option);
-    });
-
 
 });
 
