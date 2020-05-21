@@ -26,17 +26,17 @@
             <p>Filtra per: </p>
             <label for="genere"> Genere </label>
             <select name="genere" id="genere">
-                <option value="tutti">Tutti</option>
-                <option value="pop">Pop</option>
-                <option value="rock">Rock</option>
-                <option value="metal">Metal</option>
-                <option value="jazz">Jazz</option>
+                <option value="Tutti">Tutti</option>
+                <option value="Pop">Pop</option>
+                <option value="Rock">Rock</option>
+                <option value="Metal">Metal</option>
+                <option value="Jazz">Jazz</option>
             </select>
         </div>
         <div class="cds-container container"></div>
 
         <script id="disc-template" type="text/x-handlebars-template">
-            <div class="cd">
+            <div class="cd {{ genre }}">
                 <img src="{{ poster }}" alt="">
                 <h3>{{ title }}</h3>
                 <span class="author"> {{ author }} </span>

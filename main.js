@@ -37,19 +37,16 @@ $(document).ready(function() {
             }
 
             $('#genere').change(function () {
-                console.log('click!!!');
 
-                var option = $(this).find(':selected').val();;
+                var option = $(this).val();
 
-                if ($(option) != $('.cd .genre').text()) {
-                    $('.cd').addClass('invisible');
-                };
+                $('.cd').addClass('invisible');
+                $('.' + option).removeClass('invisible');
 
-                // $('#genere option').each(function() {
-                //     option += $(this).find(":selected").val();
-                // });
+                if (option == 'Tutti') {
+                    $('.cd').removeClass('invisible');
+                }
             });
-
 
         },
 

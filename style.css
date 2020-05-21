@@ -36,7 +36,7 @@ header img {
     justify-content: center;
 }
 
-.invisible {
+.cds-container .invisible {
     display: none;
 }
 
